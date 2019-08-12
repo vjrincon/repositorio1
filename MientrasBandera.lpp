@@ -1,0 +1,26 @@
+/*Obtener suma de los términos de la serie: 2, 5, 7, 10, 12, 15, 17, .... 1800.
+Suma_Serie de tipo entero, es el acumulador de términos de la serie
+Bandera de tipo carácter, es variable auxiliar que indica si al siguiente término de la serie hay que sumarle 3 ó 2.
+
+Algoritmo:
+*/
+entero Numero,Suma_Serie
+cadena [2]Bandera
+Inicio
+	Numero <- 1
+	Suma_Serie <-0
+	Bandera <-"T"
+
+	Mientras Numero < 7 haga
+		Suma_Serie <-Suma_Serie + Numero
+		Escriba Numero, " "
+		Si Bandera = "T" entonces
+			Numero <-Numero + 3
+			Bandera <-"F"
+		Sino
+			Numero <-Numero + 2
+			Bandera <-"T"
+		Fin si
+	Fin mientras
+	Escriba Suma_Serie
+Fin
